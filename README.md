@@ -1,179 +1,4 @@
-<!-- アイコン -->
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-<!-- CSS -->
-<style>
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400&display=swap');
-*{
-    font-family: "Source Code Pro", monospace;
-    font-weight: 100;
-    letter-spacing: 1px;
-}
-:root {
-    --h2bar: #e4a;
-    --h2bar2: #ddd;
-    
-    /* HTML(PDF)用設定 */
-    --h2top: 10px;
-    --h3top: 10px;
-    --h4top: 40px;
-    
-    /* MarkDown用設定 */
-    /* --h2top: 21px; */
-    /* --h3top: 15px; */
-    /* --h4top: 46px; */
-}
-::selection{
-    background: #f796;
-}
-
-/* # タイトル */
-h1 {
-    position: relative;
-    border: none;
-    letter-spacing: 2px;
-    margin-top: 150px;
-    background: #f3f3f3;
-    padding: 0 20px;
-    left: -10px;
-    /* color: #000; */
-}
-h1::before{
-    position: relative;
-    display: block;
-    content: "";
-    background: var(--h2bar2);
-    width: calc(100% + 40px);
-    left: -20px;
-    height: 5px;
-    margin-bottom: 10px;
-}
-h1::after{
-    position: relative;
-    display: block;
-    content: "";
-    background: var(--h2bar2);
-    width: calc(100% + 40px);
-    left: -20px;
-    height: 5px;
-    margin-top: 10px;
-}
-h1.first{
-    position: relative;
-    border: none;
-    letter-spacing: 2px;
-    background: #0000;
-    left: -10px;
-    margin: 0;
-    margin-top: 20px;
-    padding: 0 20px;
-}
-h1.first::before{
-    background: #0000;
-    margin: 0;
-    padding: 0;
-}
-h1.first::after{
-    background: #0000;
-    margin: 0;
-    padding: 0;
-}
-
-/* ## 大見出し */
-h2 {
-    position: relative;
-    font-size: 30px;
-    padding-right: 15px;
-    letter-spacing: 2px;
-    margin-top: 100px;
-    text-align: center;
-    user-select: none;
-}
-h2::before {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 5px;
-    background: var(--h2bar);
-    top: var(--h2top);
-    left: 0;
-}
-h2::after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 20vw;
-    height: 5px;
-    background: var(--h2bar);
-    top: var(--h2top);
-    right: 0;
-}
-
-/* ### 小見出し */
-h3 {
-    position: relative;
-    font-size: 20px;
-    border-left: solid var(--h2bar);
-    padding-left: 10px;
-    letter-spacing: 2px;
-    margin-top: 60px;
-    margin-bottom: 10px;
-}
-h3::after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 40%;
-    height: 1px;
-    background: var(--h2bar);
-    top: var(--h3top);
-    right: 0px;
-}
-
-/* #### 小項目 */
-h4 {
-    position: relative;
-    font-size: 20px;
-    letter-spacing: 2px;
-    padding-top: 30px;
-}
-h4::before {
-    display: inline-block;
-    content: ">>";
-    color: #aaaa;
-    margin-right: 10px;
-}
-h4::after {
-    display: inline-block;
-    content: "";
-    position: absolute;
-    width: 30%;
-    height: 1.5px;
-    background: #aaaa;
-    top: var(--h4top);
-    right: 0px;
-}
-
-/* 注意喚起 */
-.attention{
-    color: #f55;
-    font-size: 16px;
-    margin-left: 20px;
-}
-
-/* 補足 */
-.context {
-    font-size: 10px;
-}
-</style>
-
-
-<!-- 本文 -->
-
-
-長田 茂美 研究室 <br>
+金沢工業大　長田 茂美 研究室 <br>
 <h1 class="first">『深層学習に基づくコンクリートの締固め自動判定システムに関する研究』のマニュアル</h1>
 <br>
 
@@ -195,7 +20,6 @@ h4::after {
     - [締固め判定システムについて](#締固め判定システムについて)
     - [作業ディレクトリ](#作業ディレクトリ)
     - [メモリの解放](#メモリの解放)
-    - [VSCode内のキーバインド](#vscode内のキーバインド)
   - [Docker環境構築](#docker環境構築)
     - [概要](#概要-1)
     - [ディレクトリ構成](#ディレクトリ構成)
@@ -247,23 +71,6 @@ h4::after {
       - [make\_learning\_plan.py](#make_learning_planpy)
       - [train\_autoencoder.py](#train_autoencoderpy)
       - [MyUtils.py](#myutilspy)
-  - [DL-Boxの利用](#dl-boxの利用)
-    - [DL-Box利用の意義](#dl-box利用の意義)
-    - [DL-Boxの概要](#dl-boxの概要)
-      - [DL-Box 1](#dl-box-1)
-      - [DL-Box 2](#dl-box-2)
-    - [接続方法](#接続方法)
-      - [ssh(ターミナルから接続)](#sshターミナルから接続)
-      - [scp(ターミナルからファイルをコピー)](#scpターミナルからファイルをコピー)
-      - [smb(ファイラから接続)](#smbファイラから接続)
-      - [AnyDeskから接続](#anydeskから接続)
-    - [ShellScriptで自動ログイン](#shellscriptで自動ログイン)
-      - [パスワードが認証されない時](#パスワードが認証されない時)
-    - [接続できない時／壊したかもしれない時](#接続できない時壊したかもしれない時)
-      - [IP addressが正しくない](#ip-addressが正しくない)
-      - [パスワードが正しくない](#パスワードが正しくない)
-      - [権限を不正に変更してしまった](#権限を不正に変更してしまった)
-      - [電源がつかない／電源を消してしまった](#電源がつかない電源を消してしまった)
     - [作業ディレクトリ](#作業ディレクトリ-1)
     - [学習の回し方](#学習の回し方-1)
     - [使用上の注意点](#使用上の注意点)
@@ -345,7 +152,7 @@ int main(int argc, char **argv)
         time_t t = time(NULL);
         printf("\n%s\n", ctime(&t));
 
-        char command[128] = "echo 'kit67304' | sudo -S sysctl -w vm.drop_caches=3";
+        char command[128] = "echo <Your Password> | sudo -S sysctl -w vm.drop_caches=3";
         
         if (system(command) == -1) {
             printf("Could not excute...\n");
@@ -365,7 +172,7 @@ $ gcc remove_cache.c -o remove_cache
 $ ./remove_cache
 ```
 
-### VSCode内のキーバインド
+<!-- ### VSCode内のキーバインド
 
 私のVSCodeでは、下記のバインドになっています。\
 気になれば、VSCodeで、`[Ctrl] + [k]`&ensp;の後に&ensp;`[Ctrl] + [s]`&ensp;を押すとキーボードショートカットの設定画面が開くので、そこから変更してください。
@@ -393,7 +200,7 @@ $ ./remove_cache
 [Ctrl] + ([k] → [s])    : キーボードショートカットの設定を開く
 [Ctrl] + [b]            : 横にあるファイラのバーを表示／非表示
 [Ctrl] + [Shift] + [x]  : 拡張機能のバーを表示／非表示
-```
+``` -->
 
 
 ## Docker環境構築
@@ -1618,284 +1425,7 @@ img, ans = im.adjust_data(img, img, size=[576, 576], num_classes=3,
 ```
 
 
-## DL-Boxの利用
-
-### DL-Box利用の意義
-
-学習を回すためには大量の計算資源を要します。\
-自身のPCのリソースが足りない時は、共有のPCである「Deep Learning Box(DL-Box)」を利用できます。
-
-
-### DL-Boxの概要
-
-DL-Boxは、全部で２つあります。下に、各PCの情報を示します。\
-\
-また、DL-Boxには「AnyDesk」というリモートデスクトップアプリをインストールしてあります。\
-AnyDeskの接続には、下記の9桁の番号と、パスワードが必要です。
-
-
-#### DL-Box 1
-
-```
-IP address  : 202.13.169.154
-hostname    : dl-box
-password    : Gdep@un!V
-AnyDesk     : 214320206
-```
-
-#### DL-Box 2
-
-```
-IP address  : 202.13.169.135
-hostname    : nagalab
-password    : kit67304
-AnyDesk     : 784930150
-```
-
 <br>
-
-接続できない、またはパスワードが正しく認証されない等のトラブルが度々起きまず。大体は自力で解決策を見出せるので、必ず後述の&ensp;[接続できない時／壊したかもしれない時](#接続できない時／壊したかもしれない時)&ensp;を確認してください。
-
-### 接続方法
-
-接続の方法はいくつかあるので、必要に応じて使い分けてください。
-
-#### ssh(ターミナルから接続)
-
-`ssh`&ensp;は、ネットワーク内の端末のターミナルにログインするコマンドです。\
-構文は下記です。
-
-```
-$ ssh <hostname>@<IP address>
-```
-<br>
-なので、DL-Boxへの接続方法は下記になります。
-<br>
-<br>
-
-\* DL-Box 1
-```
-$ ssh dl-box@202.13.169.154
-```
-<br>
-
-\* DL-Box 2
-```
-$ ssh nagalab@202.13.169.135
-```
-
-#### scp(ターミナルからファイルをコピー)
-
-`scp`&ensp;は、ネットワーク内の端末から、他の端末へとファイルをコピーするコマンドです。\
-構文は下記です。
-
-```
-$ scp <コピー元のパス> <hostname>@<IP address>:<コピー先のパス>
-```
-
-例えば、`DL-Box 1`&ensp;内にある&ensp;`/home/dl-box/a.txt`&ensp;というファイルを自分のPC（hostname:nagalab、IP Address:192.168.11.10）内の&ensp;`/usr/tmp/`&ensp;内へコピーしたかったら、下記のようになります。
-
-```
-# DL-Box 1のターミナルにログイン
-$ ssh dl-box@202.13.169.154
-
-# 自分のPCへコピー
-$ scp /home/dl-box/a.txt nagalab@192.168.11.10:/usr/tmp
-```
-
-となります。\
-\
-また、ディレクトリごと丸々コピーしたいなら、引数に&ensp;`-r`&ensp;を含めます。
-
-```
-$ scp -r /home/dl-box nagalab@192.168.11.10:/usr/tmp
-```
-
-#### smb(ファイラから接続)
-
-`smb`&ensp;は、ネットワーク内の端末に、ファイラから接続するコマンドです。\
-ファイラの&ensp;`他の場所`&ensp;や&ensp;`サーバーに接続`&ensp;などの項目をクリックするとコマンドの入力欄が出てくるので、そこに下記の構文を入力してください。
-
-```
-smb://<hostname>@<IP address>
-```
-
-または
-
-```
-smb://<IP address>
-```
-
-<br>
-なので、DL-Boxへの接続方法は下記になります。
-<br>
-<br>
-
-\* DL-Box 1
-```
-$ smb://dl-box@202.13.169.154
-```
-<br>
-
-\* DL-Box 2
-```
-$ smb://nagalab@202.13.169.135
-```
-
-#### AnyDeskから接続
-
-AnyDeskは、リモートデスクトップアプリです。各自、公式HPからAnyDeskをダウンロードしておいてください。\
-AnyDeskを開くと、画面左上にリモートアドレスを入力する欄があるので、そこに下記の情報を打ち込んでください。\
-\
-&emsp;DL-Box 1 : `214320206`\
-&emsp;DL-Box 2 : `784930150`\
-\
-また、初回接続時にはパスワードの入力が求められるので、各DL-Boxのパスワード([DL-Boxの概要](#dl-boxの概要)で示したもの)を入力してください。
-
-### ShellScriptで自動ログイン
-
-`ssh`&ensp;を使ったログインのためのコマンドをShellScriptで記述することで、自動ログインを実現できます。
-
-\* `login_dlbox.sh`
-```sh
-#!/bin/sh
-
-## dl-box1
-name="dl-box"
-ip="202.13.169.154"
-password="Gdep@un!V"
-
-## dl-box2
-# name="nagata"
-# ip="202.13.169.135"
-# password="kit67304"
-
-## 自分のワークスペース
-workspace="/media/dl-box/SSD4TB"
-# workspace="/media/dl-box/SSD4TB/Concrete_SemSeg/docker"
-
-
-dpkg -s expect >/dev/null 2>&1
-if [ ! $? -eq 0 ]; then
-    sudo apt install expect
-fi
-expect -c "
-set timeout 10
-spawn ssh ${name}@${ip}
-expect \"password:\"
-send \"${password}\n\"
-expect \"Welcome to Ubuntu\"
-
-
-### ログイン後すぐに実行したいコマンド
-# 書式：send \"[コマンド]\n\"
-send \"rm_cache\n\"
-send \"nvidia-smi --query-gpu=index,utilization.gpu,name --format=csv\n\"
-send \"cd ${workspace}\n\"
-###
-
-interact
-"
-```
-
-上のShellScriptを&ensp;`login_dlbox.sh`&ensp;として保存し、
-```
-$ sh login_dlbox.sh
-```
-とターミナルで打てばDL-Boxにログインできます。
-
-#### パスワードが認証されない時
-
-初回実行時のみ、`expect`&ensp;のインストールが途中で入ることがあります。\
-その際にパスワードが求められるので、自分のPCのパスワードを入力してください。\
-\
-よくここでDL-Boxの方のパスワードを打ってしまい、「パスワードが正しくない」とエラーを出されている人がいます。
-
-
-### 接続できない時／壊したかもしれない時
-
-#### IP addressが正しくない
-
-<div class="attention"><i class='bx bxs-error-circle'></i> DL-BoxのIP addressは停電のたびに変わることがあります</div>
-
-瞬間停電等の影響により、DL-BoxのIP Addressが変わることがあります。\
-そうなると、一時的に&ensp;`ssh`&ensp;や&ensp;`smb`&ensp;コマンドで接続することができなくなります。\
-\
-AnyDeskでDL-Boxに接続した後、ターミナルで下記のコマンドを打つと新しいIP Addressがわかります。
-```
-ipconfig | grep 202.
-```
-確認後は適宜、情報を更新してください。
-
-
-#### パスワードが正しくない
-
-DL-Boxに実際にデスクトップでログインしようとした際、またはAnyDeskで接続した際、パスワードを正しく入力したにも関わらず、「パスワードが正しくない」とエラーを出されてログインできないことがあります。\
-これは、自分が今使っているキーボードと、DL-Boxが認識しているキーボードとで、キー配列が異なることで起こります。\
-\
-おそらく、自分が今使っているキーボードがJIS配列ならば、DL-Box側はUS配列を認識しているはずです。（元からUS配列を使っている人は、DL-BoxがJIS配列を認識していると考えてください。）\
-\
-具体的には、キー配列が異なることで「＠」の入力キーが異なることが直接の原因です。\
-「＠」の入力キーの関係は下記です。
-
-\* JIS -> US
-```
-@ : [Shift] + [2]
-```
-
-\* US -> JIS
-```
-@ : [
-```
-<br>
-
-なので、JIS配列を使っている人は、
-```
-Gdep"un!V
-```
-と打ち、US配列を使っている人は、
-```
-Gdep[un!V
-```
-と打てば良いことになります。
-
-DL-Box側のキーボード配列の変更方法は、後ろの&ensp;[キーボード配列の変更](#キーボード配列の変更)&ensp;を参照してください。
-
-#### 権限を不正に変更してしまった
-
-root権限でDocker環境に入った場合、そのDocker内で作成したファイルはroot権限でしか操作できなくなります。\
-そうなった際には、`chmod`&ensp;コマンドで権限のレベルを、一般ユーザーにまで下げることで解決できます。
-
-```
-sudo chmod 777 <目的のファイル>
-```
-
-時には、あるディレクトリ内のすべてのファイルの権限を操作したい場合があるかと思います。\
-この操作中に誤ってルートディレクトリにあるファイルやディレクトリなどの権限を変更すると、Linux上でコマンドの実行が不可能になり、最悪の場合、再起不能に陥ります。\
-\
-例えば、あるディレクトリ内のすべてのファイルの権限を操作するために、下記のコマンドを打とうとした時、
-```
-$ sudo chmod 777 -r */*
-```
-誤って下記のコマンドを実行した場合、
-```
-$ sudo chmod 777 -r /*
-```
-「&ensp;`/`&ensp;(ルートディレクトリ)」直下のすべてのファイルがroot権限を失います。\
-\
-ここには&ensp;`sudo`&ensp;や&ensp;`ls`&ensp;や&ensp;`cd`&ensp;などの基本的なコマンドのソースが含まれています。\
-これらのコマンドは、そのソースとなるファイルがroot権限を持つことが実行のための条件なので、これらのコマンドが実行不可能になります。\
-必然的に、`chmod`&ensp;も実行できないので、権限を戻すことは不可能です。\
-\
-一度だけ、上で紹介したコマンドがDL-Box上で実行されたことがあります。\
-その時は、GUIからPCを再起動をして、OSの修復機能を利用して難を逃れました。\
-\
-もしも修復できない場合、再起不能になります。\
-よくLinuxを理解していない人が不用意に権限の強いコマンドを実行しないように周知をよろしくお願いいたします。
-
-#### 電源がつかない／電源を消してしまった
-
-DL-Boxは、67号館2階端っこのサーバー室の、入ってすぐ左側の机の上に2台あります。電源をつけてください。
 
 
 ### 作業ディレクトリ
@@ -2143,7 +1673,7 @@ Raspberry Piとの通信の確保と、Pythonで記述された各ソースコ�
 
 <machine name="raspi" address="192.168.11.12"
 env-loader="/home/raspi-ros/catkin_ws/src/concrete_compaction/launch/x_y_move.bash"
-user="raspi-ros" password="kit67304"/>
+user="raspi-ros" password="Your Password"/>
 
 <node name="frame_read_node" pkg="concrete_compaction" type="frame_read_node.py"/>
 <node name="drawing_node" pkg="concrete_compaction" type="drawing_node.py"/>
@@ -2162,7 +1692,7 @@ user="raspi-ros" password="kit67304"/>
 
 <machine name="raspi" address="192.168.11.12"
 env-loader="/home/raspi-ros/catkin_ws/src/concrete_compaction/launch/x_y_move.bash"
-user="raspi-ros" password="kit67304"/>
+user="raspi-ros" password="Your Password"/>
 
 <node name="frame_read_node" pkg="concrete_compaction" type="frame_read_node.py"/>
 <node name="drawing_node" pkg="concrete_compaction" type="drawing_node.py"/>
