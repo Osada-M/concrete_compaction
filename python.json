@@ -1,0 +1,960 @@
+{
+
+	// besic
+
+	"explain": {
+		"prefix": "explain",
+		"body": [
+			"\"\"\"",
+			"@機能：$1",
+			"@引数：$2",
+			"@戻値：$3",
+			"\"\"\""
+		]
+	},
+
+	"config_bar": {
+		"prefix": "config_bar",
+		"body": [
+			"## ================ config ================",
+			"$1",
+			"## ========================================"
+		]
+	},
+
+	// for one's own use
+
+	"top_template": {
+		"prefix": "top_template",
+		"body": [
+			"#! /usr/local/bin/env python3",
+			"#! encode : -*- utf-8 -*-",
+			""
+		]
+	},
+	"top_template_named": {
+		"prefix": "top_named_template",
+		"body": [
+			"#! /usr/local/bin/env python3",
+			"#! encode : -*- utf-8 -*-",
+			"#! author : osada (http://ossa2019.stars.ne.jp/)",
+			""
+		]
+	},
+	"os_chdir": {
+		"prefix": "os_chdir_ossa2019_homepage",
+		"body": [
+			"import os",
+			"",
+			"os.chdir(\"/Users/osadamasashi/Desktop/ossa2019.stars.ne.jp\")",
+			""
+		]
+	},
+	"if(__name__ == \"__main__\"):": {
+		"prefix": "ifmain",
+		"body": [
+			"if(__name__ == \"__main__\"):",
+			""
+		]
+	},
+
+	// atcoder template
+
+	"atcoder": {
+		"prefix": "atcoder",
+		"body": [
+			"from sys import stdin, stdout",
+			"",
+			"",
+			"def main(inp, inps, put):",
+			"    pass$1",
+			"",
+			"",
+			"main(stdin.readline, stdin.readlines, stdout.write)",
+			""
+		]
+	},
+	"stdio_template": {
+		"prefix": "stdiotemplate",
+		"body": [
+			"from sys import stdin, stdout",
+			"",
+			"",
+			"def main(inp, inps, put):",
+			"    pass$1",
+			"",
+			"",
+			"main(stdin.readline, stdin.readlines, stdout.write)",
+			""
+		]
+	},
+	"atcoder_setrecursionlimit": {
+		"prefix": "atcoderitr",
+		"body": [
+			"from sys import stdin, stdout",
+			"from sys import setrecursionlimit",
+			"",
+			"",
+			"def itr(x, y):",
+			"    if(x*y >= 4):",
+			"        setrecursionlimit(x*y + 1)",
+			"",
+			"",
+			"def main(inp, inps, put):",
+			"    pass$1",
+			"",
+			"",
+			"main(stdin.readline, stdin.readlines, stdout.write)",
+			""
+		]
+	},
+
+	// import
+	
+	"reduce": {
+		"prefix": "reduce",
+		"body": [
+			"from functools import reduce",
+			""
+		]
+	},
+	"lru_cache": {
+		"prefix": "lrucache",
+		"body": [
+			"from functools import lru_cache",
+			""
+		]
+	},
+	"at_lru_cache": {
+		"prefix": "@lrucache",
+		"body": [
+			"@lru_cache(maxsize=None)"
+		]
+	},
+	"collection_deque": {
+		"prefix": "dequeimport",
+		"body": [
+			"from collections import deque",
+			""
+		]
+	},
+	"collection_dict": {
+		"prefix": "dictimport",
+		"body": [
+			"from collections import defaultdict",
+			""
+		]
+	},
+	"heapq": {
+		"prefix": "heapqimport",
+		"body": [
+			"from heapq import heappush, heappop",
+			""
+		]
+	},
+
+	// stdin
+
+	"input_int": {
+		"prefix": "inpint",
+		"body": [
+			"int(inp())",
+			""
+		]
+	},
+	"input_str": {
+		"prefix": "inpstr",
+		"body": [
+			"inp().rstrip()",
+			""
+		]
+	},
+	"input_list": {
+		"prefix": "inplist",
+		"body": [
+			"list(map(int, inp().split()))",
+			""
+		]
+	},
+	"input_map": {
+		"prefix": "inpmap",
+		"body": [
+			"map(int, inp().split())",
+			""
+		]
+	},
+	"input_numpy_array": {
+		"prefix": "inpnumpy",
+		"body": [
+			"np.array(map(int, inp().split()))",
+			""
+		]
+	},
+	"input_nd_list": {
+		"prefix": "inpndlist",
+		"body": [
+			"[list(map(int, inp().split())) for _ in range(N)]",
+			""
+		]
+	},
+	"input_open": {
+		"prefix": "inpopen",
+		"body": [
+			"map(int, open(0).read().split())",
+			""
+		]
+	},
+
+	// stdin - lines
+
+	"input_lines_list": {
+		"prefix": "inpslist",
+		"body": [
+			"list(map(int, inps()))",
+			""
+		]
+	},
+	"input_lines_str": {
+		"prefix": "inpsstr",
+		"body": [
+			"list(map(str.rstrip, inps()))",
+			""
+		]
+	},
+	// 1 2 -> A[0], B[0]
+	// 3 4 -> A[1], B[1]
+	// 5 6 -> A[2], B[2]
+	"input_lines_map": {
+		"prefix": "inpsmap",
+		"body": [
+			"list(zip(*map(lambda x: list(map(int, x.split())), inps())))",
+			""
+		]
+	},
+	// 1 2 3 4 5 5 -> B
+	// 2 1 4 4 3 5 -> B
+	"input_lines_list_map": {
+		"prefix": "inpslistmap",
+		"body": [
+			"map(lambda x: list(map(int, x.split())), map(str.strip, inps()))",
+			""
+		]
+	},
+	"input_lines_list_map_1": {
+		"prefix": "inpslmap",
+		"body": [
+			"map(lambda x: list(map(int, x.split())), map(str.strip, inps()))",
+			""
+		]
+	},
+	"input_lines_all": {
+		"prefix": "inpsall",
+		"body": [
+			"map(lambda x: list(map(int, x.split())), inps())",
+			""
+		]
+	},
+	"input_lines_graph": {
+		"prefix": "inpsgraph",
+		"body": [
+			"[list(\"#\"*(W+2))] + [list(\"#\" + inp().rstrip() + \"#\") for _ in range(H)] + [list(\"#\"*(W+2))]",
+			""
+		]
+	},
+	"input_lines_graph_matrix": {
+		"prefix": "inpsgraphmatrix",
+		"body": [
+			"U, V = list(zip(*map(lambda x: list(map(int, x.split())), inps())))",
+			"graph = [[0 for _ in range(N)] for _ in range(N)]",
+			"for u, v in zip(U, V):",
+			"    graph[u-1][v-1] = 1",
+			"    graph[v-1][u-1] = 1",
+			""
+		]
+	},
+	"input_lines_graph_cost": {
+		"prefix": "inpsgraphcost",
+		"body": [
+			"edge_start, edge_end, edge_cost = list(zip(*map(lambda x: list(map(int, x.split())), inps())))",
+			"graph = [[] for _ in range(N)]",
+			"for s, e, c in zip(edge_start, edge_end, edge_cost):",
+			"    graph[s].append((e, c))",
+			""
+		]
+	},
+	"input_lines_edges": {
+		"prefix": "inpsedges_or_loads",
+		"body": [
+			"U, V = [None for _ in range(M)], [None for _ in range(M)]",
+			"for i in range(M):",
+			"    U[i], V[i] = map(int, inp().split())",
+			""
+		]
+	},
+
+	// math
+
+	"int_to_nd": {
+		"prefix": "intnd",
+		"body": [
+			"def int_to_n(x, n):",
+			"    result = []",
+			"    while x:",
+			"        result.append(x%n)",
+			"        x //= n",
+			"    return result # reversed",
+			""
+		]
+	},
+	"combination": {
+		"prefix": "combination",
+		"body": [
+			"def comb(a, b):",
+			"    result = 1",
+			"    for i in range(1, b+1):",
+			"        result *= (a-i+1)/(i)",
+			"    return int(result)",
+			""
+		]
+	},
+	"factorial": {
+		"prefix": "factorial",
+		"body": [
+			"def fac(n):",
+			"    if(n <= 1):",
+			"        return 1",
+			"    result = 1",
+			"    for i in range(2, n+1):",
+			"        result *= i",
+			"    return result",
+			""
+		]
+	},
+	"premutation": {
+		"prefix": "premtation",
+		"body": [
+			"def prem(a, b):",
+			"    result = 1",
+			"    for i in range(b):",
+			"        result *= (a-i)",
+			"    return result",
+			""
+		]
+	},
+	"accum_sum": {
+		"prefix": "accumsum",
+		"body": [
+			"sums = [0] * (N+1)",
+			"for i, a in enumerate(A):",
+			"    sums[i+1] = sums[i] + a",
+			""
+		]
+	},
+	"accum_string_count": {
+		"prefix": "accumstrcount",
+		"body": [
+			"# S = list(inps())",
+			"# N = len(S)",
+			"target = \"\"",
+			"length = 0 # len(target)",
+			"counts = [0]*(N-length+2)",
+			"for n in range(N-length+1):",
+			"    counts[n+1] = counts[n]",
+			"    if(n+length < N+1) and (S[n:n+length] == target):",
+			"        counts[n+1] += 1",
+			""
+		]
+	},
+	"gcdfunc": {
+		"prefix": "gcd",
+		"body": [
+			"def gcd(a, b):",
+			"    while b:",
+			"        a, b = b, a % b",
+			"    return a",
+			""
+		]
+	},
+	"lcmfunc": {
+		"prefix": "lcm",
+		"body": [
+			"from math import gcd",
+			"",
+			"",
+			"def lcm(a, b):",
+			"    return a//gcd(a, b)*b",
+			""
+		]
+	},
+	"extgcd": {
+		"prefix": "extgcd",
+		"body": [
+			"def extgcd(a, b):",
+			"    if b:",
+			"        d, y, x = extgcd(b, a % b)",
+			"        y -= (a // b)*x",
+			"        return d, x, y",
+			"    return a, 1, 0",
+			""
+		]
+	},
+	"fft_convolution": {
+		"prefix": "fftconvolution",
+		"body": [
+			"# C(k) : 配列A, Bの要素同士の和が 1 ~ k になるものそれぞれの組み合わせの数",
+			"# convolution(a:np.array(list_a, np.int64), b:np.array(list_b, np.int64))",
+			"#  -> return C(k):list",
+			"# alt : import scipy.signal as sig; C = sig.convolve(A, B)",
+			"def convolution(a, b):",
+			"",
+			"    # fft_length = 2**n (n in Natural, len(a+b) < len_fft)",
+			"    fft_length = 2**(len(bin(len(a) + len(b))) - 2)",
+			"",
+			"    fft_a = np.fft.rfft(a, fft_length)",
+			"    fft_b = np.fft.rfft(b, fft_length)",
+			"",
+			"    ifft_result = np.fft.irfft(fft_a * fft_b, fft_length)",
+			"    ifft_result = np.rint(ifft_result).astype(np.int64)",
+			"",
+			"    return ifft_result[:len(a) + len(b) - 1]",
+			""
+		]
+	},
+	"near_value": {
+		"prefix": "nearvalue",
+		"body": [
+			"INF = int(1e10)",
+			"A.sort()",
+			"A = np.append(-INF, A)",
+			"A = np.append(A, INF)",
+			"",
+			"right = np.searchsorted(A, B)",
+			"left = right - 1",
+			"return min(map(abs, [B - A[left], B - A[right]]))",
+			""
+		]
+	},
+	"near_list": {
+		"prefix": "nearlist",
+		"body": [
+			"INF = int(1e10)",
+			"A.sort()",
+			"B.sort()",
+			"A = np.append(-INF, A)",
+			"A = np.append(A, INF)",
+			"",
+			"right = np.searchsorted(A, B)",
+			"left = right - 1",
+			"return min(map(abs, [np.min(B - A[left]), np.min(A[right] - B)]))",
+			""
+		]
+	},
+	"dp_knapsack": {
+		"prefix": "dpkanpsack",
+		"body": [
+			"# answer : dp[N][W]",
+			"def dp_max_value(N, max_weight, weight, value):",
+			"    dp = [[0]*(max_weight+1) for _ in range(N+1)]",
+			"    for i in range(N):",
+			"        for w in range(max_weight+1):",
+			"            if(w - weight[i] >= 0):",
+			"                dp[i+1][w] = max(dp[i+1][w], dp[i][w - weight[i]] + value[i])",
+			"            dp[i+1][w] = max(dp[i+1][w], dp[i][w])",
+			"    return dp",
+			""
+		]
+	},
+	"topological_sorting": {
+		"prefix": "topologicalsorting",
+		"body": [
+			"# graph : 到達できる頂点",
+			"# deg : 入次数",
+			"def topological_sort(N, graph, deg):",
+			"    ans = [n for n in range(N) if not deg[n]]",
+			"    que = deque(ans)",
+			"    while que:",
+			"        v = que.popleft()",
+			"        for t in graph[v]:",
+			"            deg[t] -= 1",
+			"            if not deg[t]:",
+			"                que.append(t)",
+			"                ans.append(t)",
+			"    ",
+			"    return ans",
+			""
+		]
+	},
+	"dijkstra": {
+		"prefix": "dijkstra",
+		"body": [
+			"INF = 10 ** 9",
+			"",
+			"# graph = [[] for _ in range(N)]",
+			"# for s, e, c in zip(node_start, node_end, edge_coet):",
+			"#     graph[s].append((e, c))",
+			"# graph = [[(終点, 重み), (終点, 重み)], [(終点, 重み), ...], ...]",
+			"# dijkstra(始点, ノード数, graph)",
+			"def dijkstra(start, n, graph):",
+			"    dist = [INF]*n",
+			"    hq = [(0, start)]",
+			"    dist[start] = 0",
+			"    seen = [False]*n",
+			"    while hq:",
+			"        v = heappop(hq)[1]",
+			"        seen[v] = True",
+			"        for to, cost in graph[v]:",
+			"            if not seen[to] and(dist[v]+cost < dist[to]):",
+			"                dist[to] = dist[v] + cost",
+			"                heappush(hq, (dist[to], to))",
+			"    return dist",
+			""
+		]
+	},
+	"dfs_find_goal": {
+		"prefix": "dfsfindgoal",
+		"body": [
+			"# start = (h, w)",
+			"# depth : len(start -> goal) or -1",
+			"def dfs(start, graph):",
+			"    stack = deque([(start[0], start[1], 0)])",
+			"    while stack:",
+			"        h, w, depth = stack.popleft()",
+			"        for new_h, new_w in ((h, w-1), (h-1, w), (h, w+1), (h+1, w)):",
+			"            x = graph[new_h][new_w]",
+			"            if(x == \"#\"):",
+			"                continue",
+			"            elif(x == \"g\"):",
+			"                return depth+1",
+			"            elif(x == \".\"):",
+			"                stack.appendleft((new_h, new_w, depth+1))",
+			"                graph[new_h][new_w] = \"#\"",
+			"",
+			"    return -1",
+			""		
+		]
+	},
+	"dfs_go_to_goal": {
+		"prefix": "dfsgotogoal",
+		"body": [
+			"# start = (h, w)",
+			"# depth : len(start -> goal) or -1",
+			"def dfs_go_to_goal(start, graph, goal):",
+			"    stack = deque([(start[0], start[1], 0)])",
+			"    while stack:",
+			"        h, w, depth = stack.popleft()",
+			"        for new_h, new_w in ((h, w-1), (h-1, w), (h, w+1), (h+1, w)):",
+			"            x = graph[new_h][new_w]",
+			"            if(x == \"#\"):",
+			"                continue",
+			"            elif(new_h == goal[0]) and (new_w == goal[1]):",
+			"                return depth+1",
+			"            elif(x == \".\"):",
+			"                stack.appendleft((new_h, new_w, depth+1))",
+			"                graph[new_h][new_w] = \"#\"",
+			"",
+			"    return -1",
+			""
+		]
+	},
+	"bfs_find_goal": {
+		"prefix": "bfsfindgoal",
+		"body": [
+			"# start = (h, w)",
+			"# depth : len(start -> goal) or -1",
+			"def bfs(start, graph):",
+			"    stack = deque([(start[0], start[1], 0)])",
+			"    while stack:",
+			"        h, w, depth = stack.popleft()",
+			"        for new_h, new_w in ((h, w-1), (h-1, w), (h, w+1), (h+1, w)):",
+			"            x = graph[new_h][new_w]",
+			"            if(x == \"#\"):",
+			"                continue",
+			"            elif(x == \"g\"):",
+			"                return depth+1",
+			"            elif(x == \".\"):",
+			"                stack.append((new_h, new_w, depth+1))",
+			"                graph[new_h][new_w] = \"#\"",
+			"",
+			"    return -1",
+			""		
+		]
+	},
+	"bfs_go_to_goal": {
+		"prefix": "bfsgotogoal",
+		"body": [
+			"# start = (h, w)",
+			"# depth : len(start -> goal) or -1",
+			"def bfs_go_to_goal(start, graph, goal):",
+			"    stack = deque([(start[0], start[1], 0)])",
+			"    while stack:",
+			"        h, w, depth = stack.popleft()",
+			"        for new_h, new_w in ((h, w-1), (h-1, w), (h, w+1), (h+1, w)):",
+			"            x = graph[new_h][new_w]",
+			"            if(x == \"#\"):",
+			"                continue",
+			"            elif(new_h == goal[0]) and (new_w == goal[1]):",
+			"                return depth+1",
+			"            elif(x == \".\"):",
+			"                stack.append((new_h, new_w, depth+1))",
+			"                graph[new_h][new_w] = \"#\"",
+			"",
+			"    return -1",
+			""
+		]
+	},
+	"bfs_get_route": {
+		"prefix": "bfsgetroute",
+		"body": [
+			"# WW : W + 2",
+			"def bfs_get_route(start, graph, WW):",
+			"    stack = deque([(start[0], start[1], 0)])",
+			"    route = defaultdict(int)",
+			"    is_goal = False",
+			"    depth_result = 0",
+			"    goal = 0",
+			"    ",
+			"    while stack and not is_goal:",
+			"        h, w, depth = stack.popleft()",
+			"        for new_h, new_w in ((h, w-1), (h-1, w), (h, w+1), (h+1, w)):",
+			"            x = graph[new_h][new_w]",
+			"            if(x == \"#\"):",
+			"                continue",
+			"            elif(x == \"g\"):",
+			"                goal = new_h*WW + new_w",
+			"                route[goal] = h*WW + w",
+			"                is_goal = True",
+			"                depth_result = depth+1",
+			"                break",
+			"            elif(x == \".\"):",
+			"                stack.append((new_h, new_w, depth+1))",
+			"                graph[new_h][new_w] = \"#\"",
+			"                route[new_h*WW + new_w] = h*WW + w",
+			"",
+			"    if not is_goal:",
+			"        return -1, []",
+			"    ",
+			"    route_result = [(goal//WW, goal%WW)] + [None]*(depth_result-1) + [start]",
+			"    next = route[goal]",
+			"    index = 1",
+			"    while(next != start[0]*WW + start[1]):",
+			"        route_result[index] = next//WW, next%WW",
+			"        next = route[next]",
+			"        index += 1",
+			"",
+			"    return depth_result, route_result[::-1]",
+			""
+		]
+	},
+	"bfs_nodes": {
+		"prefix": "bfsnodes",
+		"body": [
+			"# start = 1~N, goal = 1~N",
+			"# graph = [[0, 1, 1, 0, 0], [1, 0, ...], ...]",
+			"def bfs_nodes(start, graph, goal):",
+			"    stack = deque([(start-1, 0)])",
+			"    graph = copy.deepcopy(graph)",
+			"    while stack:",
+			"        node, depth = stack.popleft()",
+			"        for i, next in enumerate(graph[node]):",
+			"            if not next:",
+			"                continue",
+			"            if(i == goal-1):",
+			"                return depth+1",
+			"            else:",
+			"                stack.append((i, depth+1))",
+			"                graph[node][i] = 0",
+			"                graph[i][node] = 0",
+			"",
+			"    return -1",
+			"",
+		]
+	},
+	"bfs_nodes_get_route": {
+		"prefix": "bfsnodesgetroute",
+		"body": [
+			"# start = 1~N, goal = 1~N",
+			"# graph = [[0, 1, 1, 0, 0], [1, 0, ...], ...]",
+			"def bfs_get_route(start, graph, goal):",
+			"    stack = deque([(start-1, 0)])",
+			"    graph = copy.deepcopy(graph)",
+			"    parent = [None]*len(graph)",
+			"    is_goal = False",
+			"    depth_result = -1",
+			"    while stack and not is_goal:",
+			"        node, depth = stack.popleft()",
+			"        for i, next in enumerate(graph[node]):",
+			"            if not next:",
+			"                continue",
+			"            parent[i] = node",
+			"            if(i == goal-1):",
+			"                is_goal = True",
+			"                depth_result = depth+1",
+			"                break",
+			"            else:",
+			"                stack.append((i, depth+1))",
+			"                graph[node][i] = 0",
+			"                graph[i][node] = 0",
+			"",
+			"    if not is_goal:",
+			"        return -1, []",
+			"",
+			"    route = [goal] + [None]*(depth_result)",
+			"    now = goal-1",
+			"    for i in range(1, depth_result+1):",
+			"        buf = parent[now]",
+			"        route[i], now = buf+1, buf",
+			"",
+			"    return depth_result, route[::-1]",
+			""
+		]
+	},
+	"bfs_get_nodes_dist": {
+		"prefix": "bfsnodesdist",
+		"body": [
+			"# start = 1~N, length = 1~N",
+			"# graph = [[0, 1, 1, 0, 0], [1, 0, ...], ...]",
+			"def bfs_nodes_dist(start, graph, length):",
+			"    dist = [0]*length",
+			"    for goal in range(length):",
+			"        if(start == goal+1):",
+			"            continue",
+			"        else:",
+			"            stack = deque([(start-1, 0)])",
+			"            graph_copied = copy.deepcopy(graph)",
+			"            is_goal = False",
+			"            while stack and not is_goal:",
+			"                node, depth = stack.popleft()",
+			"                for i, next in enumerate(graph_copied[node]):",
+			"                    if not next:",
+			"                        continue",
+			"                    if(i == goal):",
+			"                        is_goal = True",
+			"                        dist[goal] = depth+1",
+			"                        break",
+			"                    else:",
+			"                        stack.append((i, depth+1))",
+			"                        graph_copied[node][i] = 0",
+			"                        graph_copied[i][node] = 0",
+			"",
+			"            if not is_goal:",
+			"                dist[goal] = -1",
+			"",
+			"    return dist",
+			""
+		]
+	},
+	"node_painting": {
+		"prefix": "nodepainting",
+		"body": [
+			"# N: nodes number",
+			"# M: edges number",
+			"# (A,B): (node_0, node_1), (node_2, node_3), ..., (node_2M-2, node_2M-1)",
+			"# queries: [node0, node1, ...]",
+			"def node_painting(N, M, A, B, queries):",
+			"    depth = [0]*N",
+			"    edges = []",
+			"    for a, b in zip(A, B):",
+			"        depth[a-1] += 1",
+			"        depth[b-1] += 1",
+			"        edges.append(a-1)",
+			"        edges.append(b-1)",
+			"",
+			"    graph = [[] for _ in range(N)]",
+			"    for i in range(0,2*M,2):",
+			"        a, b = edges[i], edges[i+1]",
+			"        if depth[a] < depth[b]:",
+			"            graph[a].append(b)",
+			"        else:",
+			"            graph[b].append(a)",
+			"",
+			"    timedata = list(range(1, N+1))",
+			"    lazy = [0]*N",
+			"    MASK = 1<<30",
+			"",
+			"    for t, q in enumerate(queries):",
+			"        td = timedata[q]",
+			"        for v in graph[q]:",
+			"            td = max(td,lazy[v])",
+			"",
+			"        td = (t+1)*MASK + td%MASK",
+			"        timedata[q] = lazy[q] = td",
+			"        for v in graph[q]:",
+			"            timedata[v] = td",
+			"",
+			"    ans = [0]*N",
+			"    for i in range(N):",
+			"        td = timedata[i]",
+			"        for v in graph[i]:",
+			"            td = max(td,lazy[v])",
+			"        ans[i] = td % MASK",
+			"",
+			"    return ans",
+			""
+		]
+	},
+	"BIT_class": {
+		"prefix": "bitclass",
+		"body": [
+			"class BIT:",
+			"",
+			"    # lst = [a0, a1, a2, ..., an]",
+			"    # hoge = BIT(lst)",
+			"    def __init__(self, lst):",
+			"        self.length = len(lst)+1",
+			"        self.tree = [0 for _ in range(len(lst)+1)]",
+			"        for i, j in enumerate(lst):",
+			"            self.add(i, j)",
+			"",
+			"    # sum(index) : [0, index)",
+			"    # sum()      : [0, tree.length)",
+			"    def sum(self, right:int=None):",
+			"        if(right == None):",
+			"            right = self.length - 1",
+			"        result = 0",
+			"        while right > 0:",
+			"            result += self.tree[right]",
+			"            right -= right & -right",
+			"        return result",
+			"",
+			"    # sum(left, right) : [left, right)",
+			"    def section_sum(self, left, right):",
+			"        return self.sum(right) - self.sum(left)",
+			"",
+			"# add(index, num) : tree = tree[:index] + (tree[index:] + num)",
+			"    def add(self, index, num):",
+			"        index += 1",
+			"        length = len(self.tree)",
+			"        while(index <= length - 1):",
+			"            self.tree[index] += num",
+			"            index += index & -index",
+			"        return",
+			"",
+			"    # output(index) : return tree[index]",
+			"    def output(self, index):",
+			"        return self.sum(index+1)-self.sum(index)",
+			"",
+			"    # sup_index(num) : sum(x, y) > num, return inf(y)",
+			"    def sup_index(self, num):",
+			"        sum_buf = 0",
+			"        i = 0",
+			"        length = (self.length - 1).bit_length()",
+			"        while(length >= 0):",
+			"            buf = 2**length",
+			"            if(i+buf <= self.length-1):",
+			"                if(sum_buf + self.tree[i+buf] < num):",
+			"                    sum_buf += self.tree[i+buf]",
+			"                    i += buf",
+			"            length -= 1",
+			"        return i + 1",
+			""
+		]
+	},
+	"DSU_class": {
+		"prefix": "dsuclass",
+		"body": [
+			"class DSU:",
+			"",
+			"    # dsu = DSU(length)",
+			"    def __init__(self, n):",
+			"        self._n = n",
+			"        self.parent_or_size = [-1] * n",
+			"",
+			"    # merge(a, b) : U += b (a in U)",
+			"    def merge(self, a, b):",
+			"        assert 0 <= a < self._n",
+			"        assert 0 <= b < self._n",
+			"        x, y = self.leader(a), self.leader(b)",
+			"        if x == y: return x",
+			"        if -self.parent_or_size[x] < -self.parent_or_size[y]: x, y = y, x",
+			"        self.parent_or_size[x] += self.parent_or_size[y]",
+			"        self.parent_or_size[y] = x",
+			"        return x",
+			"",
+			"    # same(a, b) : return a == b",
+			"    def same(self, a, b):",
+			"        assert 0 <= a < self._n",
+			"        assert 0 <= b < self._n",
+			"        return self.leader(a) == self.leader(b)",
+			"",
+			"    # leader(a) : return U[0] (a in U)",
+			"    def leader(self, a):",
+			"        assert 0 <= a < self._n",
+			"        if self.parent_or_size[a] < 0: return a",
+			"        self.parent_or_size[a] = self.leader(self.parent_or_size[a])",
+			"        return self.parent_or_size[a]",
+			"",
+			"    # size(a) : return len(U) (a in U)",
+			"    def size(self, a):",
+			"        assert 0 <= a < self._n",
+			"        return -self.parent_or_size[self.leader(a)]",
+			"",
+			"    # groups() : reutrn all U",
+			"    def groups(self):",
+			"        leader_buf = [self.leader(i) for i in range(self._n)]",
+			"        result = [[] for _ in range(self._n)]",
+			"        for i in range(self._n): result[leader_buf[i]].append(i)",
+			"        return [r for r in result if r != []]",
+			""
+		]
+	},
+	"UnionFind_class": {
+		"prefix": "unionfind",
+		"body": [
+			"#alt : DSU",
+			"class UnionFind():",
+			"",
+			"    # UnionFind(N) : N = tree's length",
+			"    def __init__(self, n):",
+			"        self.n = n",
+			"        self.parents = [-1] * n",
+			"",
+			"    # find(x) : return U(x)",
+			"    def find(self, x):",
+			"        if self.parents[x] < 0:",
+			"            return x",
+			"        else:",
+			"            self.parents[x] = self.find(self.parents[x])",
+			"            return self.parents[x]",
+			"",
+			"    # union(x, y) : U(x) += y",
+			"    def union(self, x, y):",
+			"        x = self.find(x)",
+			"        y = self.find(y)",
+			"        if x == y:",
+			"            return",
+			"        if self.parents[x] > self.parents[y]:",
+			"            x, y = y, x",
+			"        self.parents[x] += self.parents[y]",
+			"        self.parents[y] = x",
+			"",
+			"    # size(x) : return len(U(x))",
+			"    def size(self, x):",
+			"        return -self.parents[self.find(x)]",
+			"",
+			"    # same(x, y) : return y in U(x)",
+			"    def same(self, x, y):",
+			"        return self.find(x) == self.find(y)",
+			"",
+			"    # menber(x) : return list(U(x))",
+			"    def members(self, x):",
+			"        root = self.find(x)",
+			"        return [i for i in range(self.n) if self.find(i) == root]",
+			"",
+			"    # root() : return U root",
+			"    def roots(self):",
+			"        return [i for i, x in enumerate(self.parents) if x < 0]",
+			"",
+			"    # group_count() : return len(U)",
+			"    def group_count(self):",
+			"        return len(self.roots())",
+			"",
+			"    # all_group_menbers() : return defaultdict(U)",
+			"    def all_group_members(self):",
+			"        group_members = defaultdict(list)",
+			"        for member in range(self.n):",
+			"            group_members[self.find(member)].append(member)",
+			"        return group_members",
+			""
+		]
+	},
+}

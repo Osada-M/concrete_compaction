@@ -1,0 +1,10 @@
+test 01 : [ NG ] , erorr : 61
+test 02 : [ NG ] , erorr : 63
+test 03 : [ NG ] , erorr : 39
+test 04 : [ NG ] , erorr : 46
+test 05 : [ NG ] , erorr : 55
+test 06 : [ NG ] , erorr : 59
+test 07 : [ NG ] , erorr : 62
+test 08 : [ NG ] , erorr : 60
+test 09 : [ NG ] , erorr : 68
+test 10 : [ NG ] , erorr : 34

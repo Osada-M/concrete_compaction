@@ -1,0 +1,2 @@
+Autoencoder, ssim_10x-mse, /workspace/fullframe/result/autoencoder/AE_e-unet_20221014_ssim_mse_fold4
+CNN, e-unet_4classes_flip, /workspace/fullframe/result/540x540/e-unet_4class_use-AE-input_20221014_ssim_mse_flip_20221103_AutoLearning_fold4_576x576

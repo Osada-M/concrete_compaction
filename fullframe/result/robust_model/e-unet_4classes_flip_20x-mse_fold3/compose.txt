@@ -1,0 +1,2 @@
+Autoencoder, 20x-mse, /workspace/fullframe/result/autoencoder/AE_e-unet_20221014-1_fold3
+CNN, e-unet_4classes_flip, /workspace/fullframe/result/540x540/e-unet_4class_use-AE-input_20221014-1_flip_20221103_AutoLearning_fold3_576x576

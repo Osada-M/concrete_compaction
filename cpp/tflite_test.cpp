@@ -1,0 +1,5 @@
+// #include "pybind11/pybind11/include/pybind11/pybind11.h"
+#include "tensorflow_src/tensorflow/lite/c/common.h"
+#include "tensorflow_src/tensorflow/lite/interpreter.h"
+#include "tensorflow_src/tensorflow/lite/kernels/register.h"
+#include "tensorflow_src/tensorflow/lite/model.h"
